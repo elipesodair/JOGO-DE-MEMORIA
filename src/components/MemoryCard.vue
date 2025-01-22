@@ -1,7 +1,11 @@
 <template>
   <div
     class="card"
-    :class="{ flipped: card.flipped || card.matched }"
+    :class="{
+      flipped: card.flipped || card.matched,
+      'correct-pair': correctPair,
+      'wrong-pair': wrongPair,
+    }"
     @click="flipCard"
   >
     <div class="front">?</div>
@@ -20,6 +24,14 @@ export default {
       type: Number,
       required: true,
     },
+    correctPair: {
+      type: Boolean,
+      default: false,
+    },
+    wrongPair: {
+      type: Boolean,
+      default: false,
+    },
   },
   methods: {
     flipCard() {
@@ -31,17 +43,16 @@ export default {
 
 <style scoped>
 .card-container {
-  display: grid; 
-  grid-template-columns: repeat(5, 1fr); 
-  gap: 20px; 
-  padding: 40px; 
-  max-width: 1400px; 
-  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-
 .card {
-  width: 100%; 
+  width: 100%;
   aspect-ratio: 2 / 3;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -74,6 +85,7 @@ export default {
   background: #4caf50;
   color: white;
   transform: rotateY(180deg);
+  font-size: 2rem;
 }
 
 .card.flipped .front {
@@ -84,24 +96,59 @@ export default {
   transform: rotateY(0deg);
 }
 
+.correct-pair {
+  animation: correctEffect 0.5s ease-in-out;
+}
+
+.wrong-pair {
+  animation: wrongEffect 0.5s ease-in-out;
+}
+
+@keyframes correctEffect {
+  0% {
+    transform: scale(1);
+    background-color: #4caf50;
+  }
+  50% {
+    transform: scale(1.1);
+    background-color: #81c784;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #4caf50;
+  }
+}
+
+@keyframes wrongEffect {
+  0% {
+    transform: scale(1);
+    background-color: #f44336;
+  }
+  50% {
+    transform: scale(0.9);
+    background-color: #e57373;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #f44336;
+  }
+}
 
 @media (max-width: 1024px) {
   .card-container {
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 </style>
-
-

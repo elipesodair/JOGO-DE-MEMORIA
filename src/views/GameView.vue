@@ -107,15 +107,14 @@ export default {
 };
 </script>
 
+
 <style scoped>
 /* Estilo global */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
 }
-
 
 body {
   display: flex;
@@ -123,7 +122,7 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: #f0f4f8;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .start-screen {
@@ -174,6 +173,14 @@ body {
   background-color: #45a049;
 }
 
+.start-screen, .game-screen {
+  max-width: 100%; /* Garante que a largura não ultrapasse o limite */
+  width: 100%; /* Ajusta à largura da tela */
+  padding: 20px;
+  box-sizing: border-box; /* Inclui padding na largura total */
+  text-align: center;
+}
+
 /* Tela do jogo */
 .game-screen {
   text-align: center;
@@ -201,19 +208,19 @@ body {
 /* Grade de cartas */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
-  gap: 15px; /* Espaço entre os cards */
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Ajusta dinamicamente o número de colunas */
+  gap: 16px; /* Espaçamento consistente */
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  padding: 20px;
+  padding: 10px;
   width: 100%;
-  max-width: 800px; 
+  max-width: 1200px; /* Limita a largura máxima da grade */
 }
 
 .card {
-  width: 100px;
-  height: 150px;
+  width: 100%; /* Ajusta dinamicamente com base no grid */
+  aspect-ratio: 3 / 4; /* Mantém a proporção */
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
@@ -252,6 +259,13 @@ body {
   background: #4caf50;
   color: white;
   transform: rotateY(180deg);
+  font-size: 3rem;
+}
+
+.card .back img {
+  width: 80%; /* Aumenta o tamanho da imagem */
+  height: auto;
+  object-fit: contain;
 }
 
 .card.flipped .front {
@@ -300,50 +314,50 @@ body {
 
 /* Media Queries */
 @media (max-width: 1024px) {
-  .game-screen {
-    padding: 20px;
-  }
-
   .grid {
-    gap: 10px; 
+    gap: 12px; /* Reduz o espaçamento em telas menores */
   }
 
   .card {
-    width: 90px;
-    height: 130px;
+    aspect-ratio: 2.5 / 3; /* Ajusta a proporção para telas menores */
   }
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Ajusta o número de colunas */
   }
 
   .card {
-    width: 80px;
-    height: 120px;
-  }
-
-  .start-screen h1,
-  .game-screen h2 {
-    font-size: 1.8rem;
+    aspect-ratio: 2 / 3; /* Mantém proporções consistentes */
   }
 }
 
 @media (max-width: 480px) {
-  .game-screen {
-    padding: 10px;
-  }
-
   .grid {
-    gap: 8px;
+    gap: 8px; /* Reduz o espaçamento ainda mais */
   }
 
   .card {
-    width: 70px;
-    height: 100px;
+    aspect-ratio: 1.8 / 3; /* Proporções mais estreitas para telas pequenas */
+  }
+}
+
+@keyframes wrongEffect {
+  0% {
+    transform: scale(1);
+    background-color: #f44336;
+  }
+  50% {
+    transform: scale(0.9);
+    background-color: #e57373;
+  }
+  100% {
+    transform: scale(1);
+    background-color: #f44336;
   }
 }
 </style>
+
 
 
