@@ -109,7 +109,6 @@ export default {
 
 
 <style scoped>
-/* Estilo global */
 * {
   margin: 0;
   padding: 0;
@@ -174,14 +173,13 @@ body {
 }
 
 .start-screen, .game-screen {
-  max-width: 100%; /* Garante que a largura não ultrapasse o limite */
-  width: 100%; /* Ajusta à largura da tela */
+  max-width: 100%;
+  width: 100%;
   padding: 20px;
-  box-sizing: border-box; /* Inclui padding na largura total */
+  box-sizing: border-box;
   text-align: center;
 }
 
-/* Tela do jogo */
 .game-screen {
   text-align: center;
   background-color: #fff;
@@ -205,22 +203,21 @@ body {
   margin-bottom: 20px;
 }
 
-/* Grade de cartas */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr)); /* Ajusta dinamicamente o número de colunas */
-  gap: 16px; /* Espaçamento consistente */
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  gap: 16px;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 10px;
   width: 100%;
-  max-width: 1200px; /* Limita a largura máxima da grade */
+  max-width: 1200px;
 }
 
 .card {
-  width: 100%; /* Ajusta dinamicamente com base no grid */
-  aspect-ratio: 3 / 4; /* Mantém a proporção */
+  width: 100%;
+  aspect-ratio: 3 / 4;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
@@ -263,7 +260,7 @@ body {
 }
 
 .card .back img {
-  width: 80%; /* Aumenta o tamanho da imagem */
+  width: 80%;
   height: auto;
   object-fit: contain;
 }
@@ -276,7 +273,6 @@ body {
   transform: rotateY(0deg);
 }
 
-/* Mensagem de vitória */
 .win-message {
   background-color: #f4f7fc;
   padding: 20px;
@@ -312,34 +308,33 @@ body {
   background-color: #e64a19;
 }
 
-/* Media Queries */
 @media (max-width: 1024px) {
   .grid {
-    gap: 12px; /* Reduz o espaçamento em telas menores */
+    gap: 12px;
   }
 
   .card {
-    aspect-ratio: 2.5 / 3; /* Ajusta a proporção para telas menores */
+    aspect-ratio: 2.5 / 3;
   }
 }
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Ajusta o número de colunas */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
 
   .card {
-    aspect-ratio: 2 / 3; /* Mantém proporções consistentes */
+    aspect-ratio: 2 / 3;
   }
 }
 
 @media (max-width: 480px) {
   .grid {
-    gap: 8px; /* Reduz o espaçamento ainda mais */
+    gap: 8px;
   }
 
   .card {
-    aspect-ratio: 1.8 / 3; /* Proporções mais estreitas para telas pequenas */
+    aspect-ratio: 1.8 / 3;
   }
 }
 
