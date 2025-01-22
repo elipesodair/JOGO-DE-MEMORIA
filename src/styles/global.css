@@ -1,68 +1,68 @@
 body {
   display: flex;
-  flex-direction: column; /* Empilha os elementos verticalmente */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh; /* Garante que ocupe toda a altura da janela */
+  min-height: 100vh;
   margin: 0;
   background-image: url('@/assets/imagem/fundo-fruta.jpg');
-  background-size: cover; /* Faz a imagem cobrir toda a tela */
-  background-position: center; /* Centraliza a imagem */
-  background-attachment: fixed; /* Cria um efeito de paralaxe leve */
-  font-family: 'Arial', sans-serif; /* Define uma fonte padrão */
-  color: #fff; /* Define a cor do texto */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto para melhorar a legibilidade */
-  box-sizing: border-box; /* Facilita o controle de margens e paddings */
-  scroll-behavior: smooth; /* Navegação suave */
-  padding: 20px; /* Adiciona espaçamento interno para telas pequenas */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 20px;
 }
 
 .container {
   text-align: center;
-  margin: 20px auto; /* Centraliza horizontalmente */
-  padding: 20px; /* Adiciona espaço interno */
-  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para destaque */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
-  max-width: 800px; /* Limita a largura máxima */
-  width: 100%; /* Garante que ocupe 100% do espaço disponível */
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  width: 100%;
 }
 
-/* Responsividade */
 @media (max-width: 1024px) {
   body {
-    padding: 15px; /* Reduz o espaçamento em telas médias */
+    padding: 15px;
   }
 
   .container {
-    padding: 15px; /* Ajusta o padding interno */
-    margin: 15px auto; /* Ajusta o espaçamento externo */
-    max-width: 90%; /* Reduz a largura máxima */
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 90%;
   }
 }
 
 @media (max-width: 768px) {
   body {
-    padding: 10px; /* Reduz ainda mais o espaçamento */
+    padding: 10px;
   }
 
   .container {
-    padding: 10px; /* Ajusta o padding interno */
-    margin: 10px auto; /* Ajusta o espaçamento externo */
-    max-width: 95%; /* Ocupa quase toda a largura disponível */
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 95%;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    padding: 5px; /* Quase sem espaçamento para telas pequenas */
+    padding: 5px;
   }
 
   .container {
-    padding: 5px; /* Ajusta o padding interno */
-    margin: 5px auto; /* Ajusta o espaçamento externo */
-    max-width: 100%; /* Ocupa toda a largura disponível */
+    padding: 5px;
+    margin: 5px auto;
+    max-width: 100%;
   }
 }
+
 
 

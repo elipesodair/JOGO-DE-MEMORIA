@@ -30,20 +30,19 @@ export default {
 </script>
 
 <style scoped>
-/* Container dos cards */
 .card-container {
-  display: grid; /* Troquei para Grid Layout */
-  grid-template-columns: repeat(5, 1fr); /* Define 5 colunas de tamanho igual */
-  gap: 20px; /* Espaçamento entre os cards */
-  padding: 40px; /* Espaçamento interno no container */
-  max-width: 1400px; /* Largura máxima do container */
-  margin: 0 auto; /* Centraliza o container na página */
+  display: grid; 
+  grid-template-columns: repeat(5, 1fr); 
+  gap: 20px; 
+  padding: 40px; 
+  max-width: 1400px; 
+  margin: 0 auto; 
 }
 
-/* Estilo dos cards */
+
 .card {
-  width: 100%; /* Ajusta automaticamente o tamanho com base na coluna */
-  aspect-ratio: 2 / 3; /* Mantém a proporção de 2:3 (ex.: 120px x 180px) */
+  width: 100%; 
+  aspect-ratio: 2 / 3;
   border: 1px solid #ccc;
   border-radius: 5px;
   display: flex;
@@ -85,22 +84,22 @@ export default {
   transform: rotateY(0deg);
 }
 
-/* Responsividade */
+
 @media (max-width: 1024px) {
   .card-container {
-    grid-template-columns: repeat(4, 1fr); /* 4 colunas em telas médias */
+    grid-template-columns: repeat(4, 1fr); 
   }
 }
 
 @media (max-width: 768px) {
   .card-container {
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas em telas menores */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
 @media (max-width: 480px) {
   .card-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas pequenas */
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 </style>

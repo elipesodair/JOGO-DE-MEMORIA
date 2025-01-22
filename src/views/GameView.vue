@@ -116,17 +116,16 @@ export default {
   font-family: 'Arial', sans-serif;
 }
 
-/* Corpo da página */
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background-color: #f0f4f8;
-  overflow: hidden; /* Evita rolagem */
+  overflow: hidden; 
 }
 
-/* Tela inicial */
 .start-screen {
   text-align: center;
   background-color: #f4f7fc;
@@ -202,14 +201,14 @@ body {
 /* Grade de cartas */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajuste automático */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); 
   gap: 15px; /* Espaço entre os cards */
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   padding: 20px;
   width: 100%;
-  max-width: 800px; /* Limita a largura máxima */
+  max-width: 800px; 
 }
 
 .card {
@@ -306,7 +305,7 @@ body {
   }
 
   .grid {
-    gap: 10px; /* Reduz o espaço entre os cards */
+    gap: 10px; 
   }
 
   .card {
@@ -317,7 +316,7 @@ body {
 
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); /* Menor tamanho dos cards */
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr)); 
   }
 
   .card {
