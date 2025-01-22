@@ -1,0 +1,68 @@
+body {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Garante que ocupe toda a altura da janela */
+  margin: 0;
+  background-image: url('@/assets/imagem/fundo-fruta.jpg');
+  background-size: cover; /* Faz a imagem cobrir toda a tela */
+  background-position: center; /* Centraliza a imagem */
+  background-attachment: fixed; /* Cria um efeito de paralaxe leve */
+  font-family: 'Arial', sans-serif; /* Define uma fonte padrão */
+  color: #fff; /* Define a cor do texto */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Adiciona sombra ao texto para melhorar a legibilidade */
+  box-sizing: border-box; /* Facilita o controle de margens e paddings */
+  scroll-behavior: smooth; /* Navegação suave */
+  padding: 20px; /* Adiciona espaçamento interno para telas pequenas */
+}
+
+.container {
+  text-align: center;
+  margin: 20px auto; /* Centraliza horizontalmente */
+  padding: 20px; /* Adiciona espaço interno */
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para destaque */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  max-width: 800px; /* Limita a largura máxima */
+  width: 100%; /* Garante que ocupe 100% do espaço disponível */
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  body {
+    padding: 15px; /* Reduz o espaçamento em telas médias */
+  }
+
+  .container {
+    padding: 15px; /* Ajusta o padding interno */
+    margin: 15px auto; /* Ajusta o espaçamento externo */
+    max-width: 90%; /* Reduz a largura máxima */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px; /* Reduz ainda mais o espaçamento */
+  }
+
+  .container {
+    padding: 10px; /* Ajusta o padding interno */
+    margin: 10px auto; /* Ajusta o espaçamento externo */
+    max-width: 95%; /* Ocupa quase toda a largura disponível */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px; /* Quase sem espaçamento para telas pequenas */
+  }
+
+  .container {
+    padding: 5px; /* Ajusta o padding interno */
+    margin: 5px auto; /* Ajusta o espaçamento externo */
+    max-width: 100%; /* Ocupa toda a largura disponível */
+  }
+}
+
+
